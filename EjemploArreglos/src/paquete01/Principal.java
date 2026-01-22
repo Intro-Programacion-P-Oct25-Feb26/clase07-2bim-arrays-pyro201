@@ -24,21 +24,46 @@ public class Principal {
      */
     public static void main(String[] args) {
         
-        String [] misCafeterias = Establecimiento.obtenerCafeterias();
-        int [][] misPedidos = Pedido.obtenerPedidos();
-        String [] misSedes = Ubicacion.obtenerUbicaciones();
-        double [] promedioSemanal = Operacion.obtenerPromedioSemanal(misPedidos);
-        int pedidosMiercoles = Informe.obtenerTotalDia(misPedidos, 3);
-        int sumaPedidosTotal = Operacion.obtenerSumaTotal(misPedidos);
-        String cafeteriaMasPedida = Informe.obtenerCafeteriaMasPedidos(misPedidos, misCafeterias);
-        int [] pedidosMenores = Informe.obtenerMenorPedidoCafeteria(misPedidos);
-        int [] pedidosMayores = Informe.obtenerMayorPedidoCafeteria(misPedidos);
+        String [] misCafeterias = Establecimiento.obtenerCafeterias();/*
+        esta funcion pide obtener los nombres de las cafeterias y las almacena 
+        en un arreglo
+        */
+        int [][] misPedidos = Pedido.obtenerPedidos();/*
+        aqui se asigna los cafes vendidos y los almacena en un  arrreglo  
+        */
+        String [] misSedes = Ubicacion.obtenerUbicaciones();/*
+        se asigna la ubicacion de los cafes y los almacena en un  arrreglo
+        */
+        double [] promedioSemanal = Operacion.obtenerPromedioSemanal(misPedidos);/*
+        calcula el promediop de cafes vendidos en cada cafeteria y los almacena
+        en un  arrreglo
+        */
+        int pedidosMiercoles = Informe.obtenerTotalDia(misPedidos, 3);/*
+        suma el total de cafes vendidos el dia miercoles
+        */
+        int sumaPedidosTotal = Operacion.obtenerSumaTotal(misPedidos);/*
+        raliza una suma de todos los cafes vendidos en toda la semana
+        */
+        String cafeteriaMasPedida = Informe.obtenerCafeteriaMasPedidos(misPedidos, misCafeterias);/*
+        aqui se verifica cual es la cafeteria que registro mas pedidos en la semana
+        y la retorna 
+        */
+        int [] pedidosMenores = Informe.obtenerMenorPedidoCafeteria(misPedidos);/*
+        verifica cual es la menor cantidad de pedidos realizados en cada 
+        cafeteria y los almacena en un  arrreglo
+        */
+        int [] pedidosMayores = Informe.obtenerMayorPedidoCafeteria(misPedidos);/*
+        verifica cual es la mayor cantidad de pedidos realizados en cada 
+        cafeteria y los almacena en un  arrreglo
+        */
         Reporte.imprimirReporte(misCafeterias, misSedes, 
                 promedioSemanal, 
                 pedidosMenores, 
                 pedidosMayores, 
                 pedidosMiercoles, 
-                cafeteriaMasPedida);
+                cafeteriaMasPedida);/*
+        se uriliza para imprimir todos los datos y un reporte general
+        */
     }
     
 }
