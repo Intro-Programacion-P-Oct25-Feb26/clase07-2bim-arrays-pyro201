@@ -83,4 +83,6 @@ public class Operacion {
         return mayor;
     }
 
-}
+}/* se utiliza diversas funciones para calcular lo necesario para las diversas
+funciones
+*/

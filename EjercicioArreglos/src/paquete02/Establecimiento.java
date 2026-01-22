@@ -24,4 +24,5 @@ public class Establecimiento {
         return cafeterias;
     
     }
+    
 }
